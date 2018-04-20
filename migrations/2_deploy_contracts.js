@@ -1,5 +1,4 @@
 var List =artifacts.require("./List.sol");
-
-module.export =function(deployer){
+module.exports =function(deployer){
 deployer.deploy(List);
 };

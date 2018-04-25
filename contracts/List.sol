@@ -7,6 +7,21 @@ contract List {
     string description;
     uint256 price;
 
+
+//events
+
+event LogSellArticle(
+
+  address indexed _seller,
+  string _name,
+  uint256 _price
+  );
+    // constructor function
+
+    function List() public{
+    //  sellArticle("default article ","this is the default article ",1000000000000000000);
+    }
+
     // funtion to sell an article
 
     function sellArticle(string _name, string _desc, uint256 _price) public {
@@ -14,7 +29,7 @@ contract List {
         name = _name;
         description = _desc;
         price = _price;
-
+LogSellArticle(seller,name,price);
     }
 
     // function to get the article description
